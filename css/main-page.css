@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color:rgb(255, 255, 255);
+}
+.container{
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+}
+/*** navbar****/
+ul{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #333;
+    color: #ffffff;
+    padding-top: 20px;
+    min-height: 80px;
+    border-bottom: #222 4px solid;
+    border-top: #222 4px solid;
+    width: 100%;
+}
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 19px;
+}
+header li{
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px ;
+}
+header .brand{
+    float: left;
+}
+header .brand h1{
+    margin: 0;
+    color: #fff;
+    padding-left: 20px;
+    position: relative;
+}
+header .brand h1::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 4px;
+    width: 100px;
+    border-radius: 2px;
+    background-color: #8b550f;
+}
+h2{
+    margin: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+.products h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%);
+    height: 6px;
+    width: 100px;
+    border-radius: 4px;
+    background-color: #8b550f;
+}
+
+header .brand h1:hover{
+    color: #8b550f;
+}
+nav{
+    float: right;
+    margin-top: 10px;
+}
+header .current a{
+    color: #a51515;
+    font-weight: bold;
+}
+header a:hover{
+    color: #fff;
+}
+
+/***section of cards ****/
+
+.vip{
+    position: relative; 
+    overflow: hidden;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, 0.39);
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: all .5s;
+}
+.vip:hover .overlay{
+    opacity:1;
+    z-index: 9999;
+}
+.overlay .icons {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transition: all .5s;
+    transform: translateY(15px);
+
+}
+.vip:hover .overlay .icons {
+    transform: translateY(0);
+}
+
+.vip img {
+    transition: all .5s;
+}
+.vip:hover img {
+    transform: scale(1.1);
+}
+.icons{
+    margin-top: 70px;
+    text-align: center;
+}
+.bts,.far,.fad {
+    font-size: 18px;
+    transition: opacity .3s;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    border-radius: 100%;
+    background: rgba(255,255,255,0.8);
+    color: #333;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    opacity: .99;
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+}
+del{
+    color: #777;
+}
+
+/***the footer ****/
+footer{
+    min-height: 150px;
+    background-color: #353637;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+}
+footer .end{
+    padding: 50px;
+}
