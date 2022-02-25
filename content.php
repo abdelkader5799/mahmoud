@@ -57,6 +57,17 @@ $key_detail = $result_detail->fetch_assoc();
             <div class="card-body">
             <?php echo $key_detail['description']; ?>
             </div>
+            <h3>Shopping-cart</h3>
+        <p>
+            <button type="button" 
+                class="btn btn-default btn-sm">
+                <span class="glyphicon 
+                    glyphicon-shopping-cart">
+                </span>
+                <b> Add to Cart </b>
+                <a href="add_cart.php?id=<?php echo $key['id']; ?>">
+            </button>
+        </p>
           </div>
         </div>
         </div>
