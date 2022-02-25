@@ -13,7 +13,8 @@ if(isset($_POST['submit']))
 	$img = $row_admin['image'];
 	$count = $result_admin-> num_rows;
 	if($count > 0){
-		$_SESSION['username'] = $username;
+		$_SESSION['name'] = $username;
+
 		$_SESSION['img'] = $img;
 
 		header("Location:../index.php");

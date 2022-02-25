@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 	move_uploaded_file($image_temp, "../images/$image_name");
 	
 
-	$insert_users = "INSERT INTO `customers`( `name`, `email`, `bd`, `phone`, `password`, `image`) VALUES ('$name','$email', '$birthday','$phone','$password','$image_name')";
+	$insert_users = "INSERT INTO `customers`( `name`, `email`, `phone`, `password`, `image`) VALUES ('$name','$email','$phone','$password','$image_name')";
 	$conn->query($insert_users);
 	header("Location:../users.php");
 }

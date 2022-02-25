@@ -1,5 +1,3 @@
-<a href="?do=add" class="btn btn-info">Add New User</a>
-<br><br>
 <form method="GET" enctype="multipart/form-data">
 <input type="text" name="search" placeholder="enter name">
 <input type="submit" value="search">
@@ -10,8 +8,6 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">name</th>
-      <th scope="col">birthday</th>
-      <th scope="col">Image</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Password</th>
@@ -37,14 +33,11 @@ foreach ($result_users as $key) {
 	 <tr>
       <th><?php echo $index++ ?></th>
       <td><?php echo $key['name']; ?></td>
-      <td><?php echo $key['bd']; ?></td>
-      <td><img style="width: 50px;height: 50px;" src="images/<?php echo $key['image']; ?>"></td>
       <td><?php echo $key['email']; ?></td>
       <td><?php echo $key['phone']; ?></td>
       <td><?php echo $key['password']; ?></td>
 
       <td>
-      	<a href="?do=edit&id=<?php echo $key['id']; ?>" class="btn btn-warning">Edit</a>
       	<!--- Delete  modal --->
 
       	<!-- Button trigger modal -->

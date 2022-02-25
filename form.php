@@ -101,9 +101,6 @@
             <label for="btn4" class="form-label">telephone</label>
             <input type="text" name="phone" class="form-control" id="btn4"  placeholder="" required>
 
-            <label for="btn5" class="form-label">birthday</label>
-            <input type="date" name="birthday" class="form-control" id="btn5" required>
-
             <label for="btn6"  class="form-label">password</label>
             <input type="password" name="password" class="form-control" id="btn6"  placeholder="" required>
 

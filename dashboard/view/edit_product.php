@@ -1,5 +1,12 @@
 <?php 
 $id = $_GET['id'];
+
+include_once 'connection.php';
+
+$sql = "select * from admin";
+$dep_op  = mysqli_query($conn,$sql);
+
+
 $select_update = "SELECT * FRom products WHERE id = $id";
 $result_update = $conn->query($select_update);
 $array = $result_update->fetch_assoc();
@@ -20,5 +27,20 @@ $array = $result_update->fetch_assoc();
 		<img style="width: 100px;height: 100px;" src="images/<?php echo $array['img']; ?>">
 		
 		<input type="file" name="image"><br>
+
+		<div class="form-group">
+                <select class="form-control"  name="admin_id" >
+                 
+                <?php 
+                   while($dep_data = mysqli_fetch_assoc($dep_op)){
+                ?>
+
+       <option value="<?php echo $dep_data['id'];?>" <?php if($array['admin_id'] ==  $dep_data['id']) { echo 'selected';}?>   ><?php echo $dep_data['username'];?></option>
+
+                <?php }  ?>
+
+                </select>    
+            </div>
+
 		<input type="submit" class="btn btn-primary" name="submit" value="Edit">
 	</form>

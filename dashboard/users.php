@@ -14,7 +14,7 @@ session_start();
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Users</li>
+				<li class="active">customers</li>
 			</ol>
 		</div><!--/.row-->
 

@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <a href="?do=add" class="btn btn-info">Add New Product</a>
 <br><br>
 <form method="GET" enctype="multipart/form-data">
@@ -15,22 +21,28 @@
       <th scope="col">Discount</th>
       <th scope="col">Image</th>
       <th scope="col">Details</th>
-      
+      <th scope="col">admin name</th>
       <th scope="col">Control</th>
       
     </tr>
   </thead>
   <tbody>
+   
+
 <?php 
 $index = 1;
-$select_products = "SELECT * FROM products";
+$select_products =  "SELECT products.* , admin.username  from products  join admin on products.admin_id = admin.id ";
+$result_products = $conn->query($select_products);
+
 if(isset($_GET['search']))
 {
   $search=$_GET['search'];
-  $select_products.= " where products.name LIKE '%$search%'"; 
+  $select_products.= " where products.name LIKE '%$search%'";
 
 }
 $result_products = $conn->query($select_products);
+
+
 foreach ($result_products as $key) {
 	?>
 	 <tr>
@@ -40,7 +52,9 @@ foreach ($result_products as $key) {
       <td><?php echo $key['discount']; ?></td>
       <td><img style="width: 50px;height: 50px;" src="images/<?php echo $key['img']; ?>"></td>
       <td><?php echo $key['description']; ?></td>
-      
+
+       <td><?php echo $key['username']; ?></td>
+
 
       <td>
       	<a href="?do=edit&id=<?php echo $key['id']; ?>" class="btn btn-warning">Edit</a>

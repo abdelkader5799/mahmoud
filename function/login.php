@@ -17,7 +17,7 @@ if(isset($_POST['email']))
 		$_SESSION['email']=$email;
 		header('Location:../main.php');
 
-		
+	
 
 	}
 	else

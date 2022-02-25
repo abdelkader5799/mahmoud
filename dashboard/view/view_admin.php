@@ -1,4 +1,6 @@
-	<a href="?do=add" class="btn btn-info">Add New Admin</a>
+
+
+<a href="?do=add" class="btn btn-info">Add New Admin</a>
 				<br><br>
         <form method="GET" enctype="multipart/form-data">
         <input type="text" name="search" placeholder="enter name">
@@ -24,7 +26,9 @@ if(isset($_GET['search']))
 {
   $search=$_GET['search'];
   $select_admins.= " where admin.username LIKE '%$search%'";
+
 }
+
 $result_admins = $conn->query($select_admins);
 foreach ($result_admins as $key) {
 	?>
